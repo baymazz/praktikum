@@ -63,11 +63,65 @@ int main(int argc, char const *argv[])
             
         }
 
+        printf("\nHasil pengurangan matriks pertama dan kedua : \n");
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < b; j++)
+            {
+                printf("%d ", kurang[i][j]);
+                if (j == (b-1))
+                {
+                    printf("\n");
+                }
+                
+            }
+            
+        }
         
     } else if (a != m || b != n)
     {
         printf("\nOperasi penjumlahan dan pengurangan tidak dapat dilakukan, \nkarena kedua matriks memiliki ordo yang berbeda,\n");
     }
+    
+    // Operasi Perkalian
+    if (b == m)
+    {
+        int kali[a][n];
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                kali[i][j] = 0;
+                for (int k = 0; k < b; k++)
+                {
+                    kali[i][j] = kali[i][j] + (x[i][k] * y[k][j]);
+                }
+                
+            }
+            
+        }
+        
+        printf("\nHasil perkalian matriks pertama dan kedua : \n");
+        for (int i = 0; i < a; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                printf("%d ", kali[i][j]);
+                if (j == (n-1))
+                {
+                    printf("\n");
+                }
+                
+            }
+            
+        }
+        
+        printf("\n");
+    } else if (b != m)
+    {
+        printf("Operasi perkalian tidak dapat dilakukan,\nkarena nilai b dan m berbeda.");
+    }
+    
     
     
 
