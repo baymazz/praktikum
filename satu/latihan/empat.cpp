@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
     }
     
     // Operasi Turunan P2'
-    for (int i = 9; i < 10; i++)
+    for (int i = 9; i >= 0; i--)
     {
         turun[i-1] = P2[i] * i;
     }
@@ -84,12 +84,12 @@ int main(int argc, char const *argv[])
     printf("P2' =");
     for (int i = 9; i >= 0; i--)
     {
-        if (turun[i] != 0 && i != 0)
+        if (turun[i] != 0 && i != 1)
         {
             printf(" %dx^%d +", turun[i], i);
-        } else if (turun[i] != 0 && i == 0) 
+        } else if (turun[i] != 0 && i == 1) 
         {
-            printf(" %d\n", turun[i]);
+            printf(" %dx^%d\n", turun[i], i);
         }
         
     }
