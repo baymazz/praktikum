@@ -4,7 +4,8 @@
 #include <string.h>
 #define max 100
 
-using namespace std;
+using std::cout;
+using std::cin;
 
 struct Tumpukan
 {
@@ -67,7 +68,7 @@ int main(int argc, char const *argv[])
     else
         cout<<"Kalimat tersebut bukan palindrom";
     
-    cout<<endl;
+    cout<<std::endl;
     
     return 0;
 }
