@@ -27,9 +27,11 @@ int main(int argc, char const *argv[])
 
     puts("MENGUBAH NOTASI INFIX MENJADI POSTFIX");
     puts("DENGAN MEMANFAATKAN STRUKTUR STACK");
+    puts("(press enter)");
     do
     {
         InitializeStack(&tumpukan);
+        fgetc(stdin);
         fflush(stdin);
         puts("");
         printf("Masukkan ekspresi dalam notasi infix : ");
