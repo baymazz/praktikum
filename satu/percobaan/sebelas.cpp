@@ -17,7 +17,7 @@ void tambah_data()
     while (1)
     {
         fflush(stdin);
-        printf("\nNIM\t\t; ");
+        printf("\nNIM\t\t: ");
         scanf("%s", &data[j].nim);
 
         printf("Nama\t\t: ");
