@@ -8,7 +8,7 @@ int	main(int argc, char **argv)
     int n;
 
     printf("== Program Print Bilangan Fibonacci Pertama Sampai ke-n ==\n\n");
-   printf("input batas bilangan (n) : ");
+    printf("input batas bilangan (n) : ");
     scanf("%d", &n);
 
     fibo = (int*)malloc(n * sizeof(int));
