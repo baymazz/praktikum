@@ -6,17 +6,20 @@
 int main(int argc, char **argv)
 {
    int *prime;
-   int n;
+   int n, m;
    int cek;
    std::vector<int> temp;
-
    
    printf("== Program Print Bilangan Prima Pertama Sampai ke-n ==\n\n");
-   printf("input batas bilangan (n) : ");
+   printf("input batas (n) : ");
+   scanf("%d", &n);
+   printf("\nm akan dikalikan dengan besar memori untuk int\nm sebaiknya lebih besar dari n agar semua bilangan sampai ke-n ditampilkan\ninput ukuran memori yang ingin dialokasikan (m) :");
    scanf("%d", &n);
 
-   prime = (int*)malloc(n * sizeof(int));
-    
+
+   prime = (int*)malloc(sizeof(int));
+   realloc(prime, m * sizeof(int));
+
    temp.push_back(1);
    temp.push_back(2);
    temp.push_back(3);
